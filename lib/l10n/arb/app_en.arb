@@ -1,0 +1,92 @@
+{
+    "@@locale": "en",
+    "todosOverviewAppBarTitle": "My Todos",
+    "@todosOverviewAppBarTitle": {
+        "description": "Title shown in the AppBar of the Todos Overview Screen."
+    },
+    "todosOverviewErrorSnackbarText": "An error occurred while loading todos.",
+    "@todosOverviewErrorSnackbarText": {
+        "description": "Snackbar text shown when an error occurs while loading todos."
+    },
+    "todosOverviewTodoDeletedSnackBarText": "Todo \"{todoTitle}\" deleted.",
+    "@todosOverviewTodoDeletedSnackBarText": {
+        "description": "Snackbar text shown when a todo is deleted from the Todos Overview Screen.",
+        "placeholders": {
+            "todoTitle": {
+                "description": "The title of the todo deleted"
+            }
+        }
+    },
+    "todosOverviewEmptyText": "No todos found with the selected filters.",
+    "@todosOverviewEmptyText": {
+        "description": "Text shown in the Todos Overview Screen when no todos are found with the selected filters."
+    },
+    "todosOverviewSomethingWentWrongText": "Oops, something went wrong.",
+    "@todosOverviewSomethingWentWrongText": {
+        "description": "Text shown in the Todos Overview Screen when something went wrong."
+    },
+    "todosOverviewOptionsTooltip": "Options",
+    "@todosOverviewOptionsTooltip": {
+        "description": "Tooltip text shown in the options dropdown of the Todos Overview Screen."
+    },
+    "todosOverviewOptionsMarkAllIncomplete": "Mark All Incomplete",
+    "@todosOverviewOptionsMarkAllIncomplete": {
+        "description": "Text shown in the options dropdown of the Todos Overview Screen that marks all todos as incomplete."
+    },
+    "todosOverviewOptionsMarkAllComplete": "Mark All Complete",
+    "@todosOverviewOptionsMarkAllComplete": {
+        "description": "Text shown in the options dropdown of the Todos Overview Screen that marks all todos as complete."
+    },
+    "todosOverviewOptionsClearCompleted": "Clear Completed",
+    "@todosOverviewOptionsClearCompleted": {
+        "description": "Text shown in the options dropdown of the Todos Overview Screen that clears all completed todos."
+    },
+    "todosOverviewFilterTooltip": "Filter",
+    "@todosOverviewFilterTooltip": {
+        "description": "Tooltip text shown in the filter dropdown of the Todos Overview Screen."
+    },
+    "todosOverviewFilterAllText": "All",
+    "@todosOverviewFilterAllText": {
+        "description": "Text shown in the filter dropdown of the Todos Overview Screen for the option to display all todos."
+    },
+    "todosOverviewFilterActiveOnlyText": "Active",
+    "@todosOverviewFilterActiveOnlyText": {
+        "description": "Text shown in the filter dropdown of the Todos Overview Screen for the option to display only active todos."
+    },
+    "todosOverviewFilterCompletedOnlyText": "Completed",
+    "@todosOverviewFilterCompletedOnlyText": {
+        "description": "Text shown in the filter dropdown of the Todos Overview Screen for the option to display only completed todos."
+    },
+    "statsAppBarTitle": "Stats",
+    "@statsAppBarTitle": {
+        "description": "Title shown in the AppBar of the Stats Screen."
+    },
+    "statsSomethingWentWrongText": "Oops, something went wrong.",
+    "@statsSomethingWentWrongText": {
+        "description": "Text shown in the Stats Screen when something went wrong."
+    },
+    "statsCompletedTodosCountLabel": "Completed Todos",
+    "@statsCompletedTodosCountLabel": {
+        "description": "Label text shown in the completed todos count section in Stats Screen."
+    },
+    "statsActiveTodosCountLabel": "Active Todos",
+    "@statsActiveTodosCountLabel": {
+        "description": "Label text shown in the active todos count section in Stats Screen."
+    },
+    "editTodoAppBarAddNewTodoTitle": "Add New Todo",
+    "@editTodoAppBarAddNewTodoTitle": {
+        "description": "Title shown in the App Bar of the Edit Todo Screen."
+    },
+    "editTodoAppBarEditTodoTitle": "Edit Todo",
+    "@editTodoAppBarEditTodoTitle": {
+        "description": "Title shown in the App Bar of the Edit Todo Screen."
+    },
+    "editTodoDescriptionLabel": "Description",
+    "@editTodoDescriptionLabel": {
+        "description": "Label text shown in the description field in Edit Todo Screen."
+    },
+    "editTodoTitleLabel": "Title",
+    "@editTodoTitleLabel": {
+        "description": "Label text shown in the title field in Edit Todo Screen."
+    }
+}
