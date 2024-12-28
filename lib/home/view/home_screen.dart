@@ -43,11 +43,13 @@ class HomeView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             _HomeTabButton(
+              key: const Key('homeView_selectTodosTab_homeTabButton'),
               groupValue: selectedTab,
               value: HomeTab.todos,
               icon: const Icon(Icons.format_list_bulleted_rounded),
             ),
             _HomeTabButton(
+              key: const Key('homeView_selectStatsTab_homeTabButton'),
               groupValue: selectedTab,
               value: HomeTab.stats,
               icon: const Icon(Icons.show_chart_rounded),
@@ -64,6 +66,7 @@ class _HomeTabButton extends StatelessWidget {
     required this.groupValue,
     required this.value,
     required this.icon,
+    super.key,
   });
 
   final HomeTab groupValue;
