@@ -13,7 +13,7 @@ class TodosOverviewFilterButton extends StatelessWidget {
     final activeFilter = context.select<TodosOverviewBloc, TodosViewFilter>(
       (bloc) => bloc.state.filter,
     );
-    return PopupMenuButton(
+    return PopupMenuButton<TodosViewFilter>(
       // shape: const ContinuousRectangleBorder(
       //   borderRadius: BorderRadius.all(Radius.circular(16)),
       // ),

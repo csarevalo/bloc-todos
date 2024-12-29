@@ -34,6 +34,7 @@ class TodoListTile extends StatelessWidget {
         ),
       ),
       child: ListTile(
+        key: Key('todoListTile_listTile_${todo.id}'),
         onTap: onTap,
         title: Text(
           todo.title,
