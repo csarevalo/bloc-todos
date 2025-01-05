@@ -47,6 +47,7 @@ class TodosOverviewView extends StatelessWidget {
                   ..hideCurrentSnackBar()
                   ..showSnackBar(
                     SnackBar(
+                      behavior: SnackBarBehavior.fixed,
                       content: Text(l10n.todosOverviewErrorSnackbarText),
                     ),
                   );
@@ -59,14 +60,25 @@ class TodosOverviewView extends StatelessWidget {
                 current.lastDeletedTodo != null,
             listener: (context, state) {
               final deletedTodo = state.lastDeletedTodo!;
-              ScaffoldMessenger.of(context)
+              final messenger = ScaffoldMessenger.of(context);
+              messenger
                 ..hideCurrentSnackBar()
                 ..showSnackBar(
                   SnackBar(
+                    behavior: SnackBarBehavior.fixed,
                     content: Text(
                       l10n.todosOverviewTodoDeletedSnackBarText(
                         deletedTodo.title,
                       ),
+                    ),
+                    action: SnackBarAction(
+                      label: l10n.todosOverviewUndoDeletionButtonText,
+                      onPressed: () {
+                        messenger.hideCurrentSnackBar();
+                        context
+                            .read<TodosOverviewBloc>()
+                            .add(const TodosOverviewUndoDeletionRequested());
+                      },
                     ),
                   ),
                 );
@@ -78,6 +90,7 @@ class TodosOverviewView extends StatelessWidget {
             if (state.filteredTodos.isEmpty) {
               switch (state.status) {
                 case TodosOverviewStatus.initial:
+                  return const SizedBox();
                 case TodosOverviewStatus.loading:
                   return const CircularProgressIndicator.adaptive();
                 case TodosOverviewStatus.failure:

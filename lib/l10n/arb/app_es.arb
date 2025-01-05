@@ -17,6 +17,10 @@
             }
         }
     },
+    "todosOverviewUndoDeletionButtonText": "Anular",
+    "@todosOverviewUndoDeletionButtonText": {
+        "description": "El texto de el button de la Snackbar que anula la eliminación de una tarea pendiente."
+    },
     "todosOverviewEmptyText": "No se encontraron tareas con los filtros seleccionados.",
     "@todosOverviewEmptyText": {
         "description": "Texto que se muestra en la Pantalla de Todos Overview (Resumen de Tareas) cuando no se encuentran tareas con el filtro seleccionado."

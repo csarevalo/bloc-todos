@@ -17,6 +17,10 @@
             }
         }
     },
+    "todosOverviewUndoDeletionButtonText": "Undo",
+    "@todosOverviewUndoDeletionButtonText": {
+        "description": "Snackbar button text shown that undos a deletion of a todo."
+    },
     "todosOverviewEmptyText": "No todos found with the selected filters.",
     "@todosOverviewEmptyText": {
         "description": "Text shown in the Todos Overview Screen when no todos are found with the selected filters."

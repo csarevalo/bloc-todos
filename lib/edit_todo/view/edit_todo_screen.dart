@@ -55,12 +55,23 @@ class EditTodoView extends StatelessWidget {
               : l10n.editTodoAppBarEditTodoTitle,
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () =>
-            context.read<EditTodoBloc>().add(const EditTodoSubmitted()),
-        child: status.isLoadingOrSuccess
-            ? const CircularProgressIndicator.adaptive()
-            : const Icon(Icons.check_rounded),
+      floatingActionButton: BlocBuilder<EditTodoBloc, EditTodoState>(
+        buildWhen: (previous, current) =>
+            previous.title.isEmpty != current.title.isEmpty,
+        builder: (context, state) {
+          final isTitleEmpty = state.title.isEmpty;
+          return FloatingActionButton(
+            onPressed: isTitleEmpty
+                ? null //disable FAB when title is empty
+                : () =>
+                    context.read<EditTodoBloc>().add(const EditTodoSubmitted()),
+            child: status.isLoadingOrSuccess
+                ? const CircularProgressIndicator.adaptive()
+                : isTitleEmpty
+                    ? const Icon(Icons.lock) //edit_off
+                    : const Icon(Icons.check_rounded),
+          );
+        },
       ),
       body: const SingleChildScrollView(
         child: Padding(
