@@ -38,7 +38,7 @@ class StatsView extends StatelessWidget {
                 child: CircularProgressIndicator.adaptive(),
               );
             case StatsStatus.failure:
-              Center(
+              return Center(
                 child: Text(l10n.statsSomethingWentWrongText),
               );
             case StatsStatus.success:
@@ -49,11 +49,14 @@ class StatsView extends StatelessWidget {
               children: [
                 const SizedBox(height: 12),
                 TodoCountTile(
+                  key: const ValueKey('statsView_TodoCountTile_completedTodos'),
                   labelText: l10n.statsCompletedTodosCountLabel,
                   count: state.completedTodos,
                   icon: Icons.check,
+                  iconColor: Colors.green,
                 ),
                 TodoCountTile(
+                  key: const ValueKey('statsView_TodoCountTile_activeTodos'),
                   labelText: l10n.statsActiveTodosCountLabel,
                   count: state.activeTodos,
                   icon: Icons.radio_button_unchecked_rounded,
