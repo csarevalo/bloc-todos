@@ -1,6 +1,6 @@
 name: todos_api
 description: The interface and models for an API providing access to todos.
-version: 0.1.0+1
+version: 1.0.0+0
 publish_to: none
 
 environment:
