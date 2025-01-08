@@ -42,4 +42,5 @@ jobs:
       - uses: bluefireteam/flutter-gh-pages@v7
         with:
           customArgs: --target='lib/main_development.dart'
+          # customArgs: -t lib/main_development.dart #likely also works
           baseHref: /bloc-todos/
