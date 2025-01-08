@@ -92,5 +92,9 @@
     "editTodoTitleLabel": "Título",
     "@editTodoTitleLabel": {
         "description": "Texto de etiqueta que se muestra en el campo de título en la Pantalla Editar Tarea (Edit Todo Screen)."
+    },
+    "editTodoSaveButtonTooltip": "Guardar Cambios",
+    "@editTodoSaveButtonTooltip": {
+        "description": "Texto de información sobre herramientas que se muestra en el botón Guardar en la Pantalla Editar Tarea (Edit Todo Screen)."
     }
 }

@@ -61,6 +61,7 @@ class EditTodoView extends StatelessWidget {
         builder: (context, state) {
           final isTitleEmpty = state.title.isEmpty;
           return FloatingActionButton(
+            tooltip: l10n.editTodoSaveButtonTooltip,
             onPressed: isTitleEmpty
                 ? null //disable FAB when title is empty
                 : () =>

@@ -10,14 +10,18 @@ class TitleField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final l10n = context.l10n;
-    final state = context.watch<EditTodoBloc>().state;
-    final hintText = state.initialTodo?.title ?? '';
+    final status =
+        context.select<EditTodoBloc, EditTodoStatus>((b) => b.state.status);
+    final title = context.select<EditTodoBloc, String>((b) => b.state.title);
+    final hintText =
+        context.read<EditTodoBloc>().state.initialTodo?.title ?? '';
 
     return TextFormField(
       key: const Key('editTodoView_title_textFormField'),
-      initialValue: state.title,
+      enabled: !status.isLoadingOrSuccess, //textFormField enabled
+      initialValue: title,
       decoration: InputDecoration(
-        enabled: !state.status.isLoadingOrSuccess,
+        enabled: !status.isLoadingOrSuccess, //decoration enabled
         labelText: l10n.editTodoTitleLabel,
         hintText: hintText,
       ),

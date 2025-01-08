@@ -10,15 +10,19 @@ class DescriptionField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final l10n = context.l10n;
-
-    final state = context.watch<EditTodoBloc>().state;
-    final hintText = state.initialTodo?.description ?? '';
+    final status =
+        context.select<EditTodoBloc, EditTodoStatus>((b) => b.state.status);
+    final description =
+        context.select<EditTodoBloc, String>((b) => b.state.description);
+    final hintText =
+        context.read<EditTodoBloc>().state.initialTodo?.description ?? '';
 
     return TextFormField(
       key: const Key('editTodoView_description_textFormField'),
-      initialValue: state.description,
+      enabled: !status.isLoadingOrSuccess, //textFormField enabled
+      initialValue: description,
       decoration: InputDecoration(
-        enabled: !state.status.isLoadingOrSuccess,
+        enabled: !status.isLoadingOrSuccess, //decoration enabled
         labelText: l10n.editTodoDescriptionLabel,
         hintText: hintText,
       ),

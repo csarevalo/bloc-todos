@@ -92,5 +92,9 @@
     "editTodoTitleLabel": "Title",
     "@editTodoTitleLabel": {
         "description": "Label text shown in the title field in Edit Todo Screen."
+    },
+    "editTodoSaveButtonTooltip": "Save Changes",
+    "@editTodoSaveButtonTooltip": {
+        "description": "Tooltip text shown in the save button on the Edit Todo Screen."
     }
 }
