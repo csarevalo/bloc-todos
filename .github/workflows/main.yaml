@@ -36,8 +36,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2 #v2 only
+      - uses: actions/checkout@v4
       - uses: subosito/flutter-action@v1
       - uses: bluefireteam/flutter-gh-pages@v7
         with:
+          customArgs: --flavor development
           baseHref: /bloc-todos/
