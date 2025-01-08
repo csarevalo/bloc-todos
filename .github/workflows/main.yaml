@@ -39,7 +39,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: subosito/flutter-action@v1
-      - uses: bluefireteam/flutter-gh-pages@v7
+      - uses: bluefireteam/flutter-gh-pages@v8
         with:
           customArgs: --target='lib/main_development.dart'
           # customArgs: -t lib/main_development.dart #likely also works
