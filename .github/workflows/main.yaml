@@ -8,6 +8,10 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'lib/**'
+      - 'packages/**/lib/**'
+      - '*.yaml'
   pull_request:
     branches:
       - main
@@ -27,3 +31,12 @@ jobs:
       includes: |
         **/*.md
       modified_files_only: false
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2 #v2 only
+      - uses: subosito/flutter-action@v1
+      - uses: bluefireteam/flutter-gh-pages@v7
+        with:
+          baseHref: /bloc-todos/
