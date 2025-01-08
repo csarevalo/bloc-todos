@@ -10,8 +10,9 @@ on:
       - main
     paths:
       - 'lib/**'
-      - 'packages/**/lib/**'
       - '*.yaml'
+      - 'packages/**/lib/**'
+      - 'packages/**/*.yaml'
   pull_request:
     branches:
       - main
