@@ -251,9 +251,5 @@ void main() {
         },
       );
     });
-
-    //TODO: test state statuses by reference `TodosOverview` using blocTests
-
-    //TODO: test certain widgets using todo count tile
   });
 }
