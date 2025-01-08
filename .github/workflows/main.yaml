@@ -41,5 +41,5 @@ jobs:
       - uses: subosito/flutter-action@v1
       - uses: bluefireteam/flutter-gh-pages@v7
         with:
-          customArgs: --flavor development
+          customArgs: --target='lib/main_development.dart'
           baseHref: /bloc-todos/
