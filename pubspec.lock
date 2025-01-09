@@ -376,7 +376,7 @@ packages:
       path: "packages/local_storage_todos_api"
       relative: true
     source: path
-    version: "0.1.0+1"
+    version: "1.0.0+0"
   logging:
     dependency: transitive
     description:
@@ -756,14 +756,14 @@ packages:
       path: "packages/todos_api"
       relative: true
     source: path
-    version: "0.1.0+1"
+    version: "1.0.0+0"
   todos_repository:
     dependency: "direct main"
     description:
       path: "packages/todos_repository"
       relative: true
     source: path
-    version: "0.1.0+1"
+    version: "1.0.0+0"
   typed_data:
     dependency: transitive
     description:
