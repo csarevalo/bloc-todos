@@ -20,6 +20,7 @@ dependencies:
   meta: ^1.15.0
   todos_api:
     path: packages/todos_api
+    version: 1.0.0+0
   todos_repository:
     path: packages/todos_repository
 
